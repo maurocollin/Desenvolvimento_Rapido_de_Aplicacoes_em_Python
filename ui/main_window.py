@@ -8,7 +8,7 @@ from core.repository import (
 class MainWindow:
     def __init__(self, root):
         self.root = root
-        self.root.title("Sistema de Registro de Notas - Estácio")
+        self.root.title("Sistema de Notas - Grupo 4")
         self.root.geometry("850x650")
         
         # --- Configuração do Modo Escuro (Dark Mode) e Estilo ---
