@@ -41,7 +41,7 @@ Antes de começar, você precisará instalar as ferramentas básicas:
 ### 2. Clonar o Repositório
 Abra o **Git CMD** ou terminal e execute:
 ```bash
-git clone [https://github.com/maurocollin/desenvolvimento_rapido_de_aplicacoes_em_python.git](https://github.com/maurocollin/desenvolvimento_rapido_de_aplicacoes_em_python.git)
+git clone https://github.com/maurocollin/desenvolvimento_rapido_de_aplicacoes_em_python.git
 cd desenvolvimento_rapido_de_aplicacoes_em_python
 
 ### 3. Rode os seguintes comandos:
