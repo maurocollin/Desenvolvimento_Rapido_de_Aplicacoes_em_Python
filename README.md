@@ -48,17 +48,13 @@ cd desenvolvimento_rapido_de_aplicacoes_em_python
 No próprio **Git CMD** ou terminal e execute os seguintes comandos:
 
 # Cria o ambiente virtual
-```bash
 python -m venv .venv
 
 # Ativar o ambiente virtual (Windows)
-```bash
 .venv\Scripts\activate
 
 # Instala dependências
-```bash
 pip install -r requirements.txt
 
 # Executar o ponto de entrada do sistema
-```bash
 python main.py
