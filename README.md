@@ -45,7 +45,7 @@ git clone https://github.com/maurocollin/desenvolvimento_rapido_de_aplicacoes_em
 cd desenvolvimento_rapido_de_aplicacoes_em_python
 
 ### 3. Rode os seguintes comandos:
-No próprio **Git CMD** ou terminal e execute os seguintes comandos:
+# No próprio **Git CMD** ou terminal e execute os seguintes comandos:
 
 # Cria o ambiente virtual
 python -m venv .venv
