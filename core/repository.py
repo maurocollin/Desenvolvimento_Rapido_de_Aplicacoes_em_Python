@@ -12,8 +12,7 @@ def insert_aluno(nome, matricula, notas):
             ''', (nome, matricula, *notas, media))
             conn.commit()
             return True
-        except Exception as e:
-            print(f"Erro ao inserir: {e}")
+        except:
             return False
         finally:
             conn.close()
@@ -30,7 +29,6 @@ def select_all_alunos():
     return []
 
 def select_alunos_por_termo(termo):
-    """Busca alunos por nome ou matrícula."""
     conn = connect_db()
     if conn:
         cursor = conn.cursor()
