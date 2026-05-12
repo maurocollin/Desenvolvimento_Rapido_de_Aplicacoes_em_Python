@@ -1,4 +1,4 @@
-# Sistema de Registro de Notas de Alunos - Estácio
+# Sistema de Registro de Notas de Alunos - GRUPO 4
 
 Este projeto foi desenvolvido como parte da **Atividade Verificadora de Aprendizagem** para a disciplina de **Desenvolvimento Rápido de Aplicações em Python**. O sistema permite a gestão completa (CRUD) de alunos e suas respectivas notas.
 
