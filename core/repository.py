@@ -1,70 +1,67 @@
-from core.database import connect_db
+from .database import connect_db
 
-def calcular_media(n1, n2, n3, n4):
-    """Calcula a média aritmética simples de 4 notas."""
-    return (n1 + n2 + n3 + n4) / 4
-
-def insert_aluno(nome, matricula, n1, n2, n3, n4):
-    """Cadastra um novo aluno com o cálculo da média."""
-    media = calcular_media(n1, n2, n3, n4)
+def insert_aluno(nome, matricula, notas):
+    media = sum(notas) / len(notas)
     conn = connect_db()
     if conn:
         cursor = conn.cursor()
         try:
-            cursor.execute("""
+            cursor.execute('''
                 INSERT INTO alunos (nome, matricula, nota1, nota2, nota3, nota4, media)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
-            """, (nome, matricula, n1, n2, n3, n4, media))
+            ''', (nome, matricula, *notas, media))
             conn.commit()
             return True
         except Exception as e:
-            print(f"Erro ao inserir aluno: {e}")
+            print(f"Erro ao inserir: {e}")
             return False
         finally:
             conn.close()
+    return False
 
 def select_all_alunos():
-    """Retorna todos os registros da tabela alunos."""
     conn = connect_db()
     if conn:
         cursor = conn.cursor()
-        cursor.execute("SELECT * FROM alunos")
+        cursor.execute('SELECT * FROM alunos')
         alunos = cursor.fetchall()
         conn.close()
         return alunos
     return []
 
-def update_aluno(aluno_id, nome, matricula, n1, n2, n3, n4):
-    """Atualiza os dados de um aluno e recalcula a média."""
-    media = calcular_media(n1, n2, n3, n4)
+def select_alunos_por_termo(termo):
+    """Busca alunos por nome ou matrícula."""
     conn = connect_db()
     if conn:
         cursor = conn.cursor()
-        try:
-            cursor.execute("""
-                UPDATE alunos 
-                SET nome = ?, matricula = ?, nota1 = ?, nota2 = ?, nota3 = ?, nota4 = ?, media = ?
-                WHERE id = ?
-            """, (nome, matricula, n1, n2, n3, n4, media, aluno_id))
-            conn.commit()
-            return True
-        except Exception as e:
-            print(f"Erro ao atualizar aluno: {e}")
-            return False
-        finally:
-            conn.close()
+        query = "SELECT * FROM alunos WHERE nome LIKE ? OR matricula LIKE ?"
+        cursor.execute(query, (f"%{termo}%", f"%{termo}%"))
+        alunos = cursor.fetchall()
+        conn.close()
+        return alunos
+    return []
 
-def delete_aluno(aluno_id):
-    """Remove um registro de aluno pelo ID."""
+def update_aluno(id_aluno, nome, matricula, notas):
+    media = sum(notas) / len(notas)
     conn = connect_db()
     if conn:
         cursor = conn.cursor()
-        try:
-            cursor.execute("DELETE FROM alunos WHERE id = ?", (aluno_id,))
-            conn.commit()
-            return True
-        except Exception as e:
-            print(f"Erro ao deletar aluno: {e}")
-            return False
-        finally:
-            conn.close()
+        cursor.execute('''
+            UPDATE alunos 
+            SET nome = ?, matricula = ?, nota1 = ?, nota2 = ?, nota3 = ?, nota4 = ?, media = ?
+            WHERE id = ?
+        ''', (nome, matricula, *notas, media, id_aluno))
+        conn.commit()
+        conn.close()
+        return True
+    return False
+
+def delete_aluno(id_aluno):
+    conn = connect_db()
+    if conn:
+        cursor = conn.cursor()
+        cursor.execute('DELETE FROM alunos WHERE id = ?', (id_aluno,))
+        conn.commit()
+        conn.close()
+        return True
+    return False
