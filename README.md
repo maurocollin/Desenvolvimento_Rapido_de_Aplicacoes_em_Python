@@ -1,23 +1,28 @@
-# Sistema de Registro de Notas de Alunos
+# Sistema de Registro de Notas de Alunos - Estácio
 
-Projeto desenvolvido para a disciplina de **Desenvolvimento Rápido de Aplicações em Python**.
+Este projeto foi desenvolvido como parte da **Atividade Verificadora de Aprendizagem** para a disciplina de **Desenvolvimento Rápido de Aplicações em Python**. O sistema permite a gestão completa (CRUD) de alunos e suas respetivas notas.
 
-## 🛠️ Tecnologias Utilizadas
-* Python 3
-* SQLite
-* Tkinter
+## 🛠️ Tecnologias e Requisitos
+* **Linguagem:** Python 3.10 ou superior
+* **Base de Dados:** SQLite 3
+* **Interface Gráfica:** Tkinter (Customizado em Dark Mode)
 
-## 📊 SQLite vs PostgreSQL (Análise Técnica)
-Conforme solicitado no enunciado, optou-se pelo uso do SQLite em substituição ao PostgreSQL.
+## 📊 Análise Técnica: SQLite vs PostgreSQL
+Conforme os requisitos da atividade, optou-se pela utilização do **SQLite**.
 
 ### Ganhos:
-* **Portabilidade:** O banco de dados é um arquivo único, facilitando a execução sem dependências externas.
-* **Simplicidade:** Ideal para sistemas de pequeno porte, sem necessidade de servidor dedicado.
+* **Portabilidade:** A base de dados é um ficheiro único (`sistema_notas.db`), permitindo a execução imediata sem a necessidade de configurar um servidor externo como o PostgreSQL.
+* **Agilidade no Desenvolvimento:** Ideal para prototipagem rápida e aplicações de pequeno porte.
 
 ### Perdas:
-* **Escalabilidade:** Limitações em acessos simultâneos de escrita.
-* **Tipagem:** Menor rigor na validação de tipos de dados comparado ao PostgreSQL.
+* **Escalabilidade:** O SQLite não suporta múltiplos acessos simultâneos de escrita tão eficientemente quanto o PostgreSQL.
+* **Segurança:** Ausência de um sistema robusto de gestão de utilizadores e permissões a nível de motor de base de dados.
 
-## 🚀 Como executar
-1. Certifique-se de ter o Python 3 instalado.
-2. Execute o comando: `python main.py`.
+## 🚀 Instruções de Execução
+
+Siga os passos abaixo para preparar o ambiente e executar o sistema:
+
+### 1. Criar o Ambiente Virtual (.venv)
+No terminal, dentro da pasta do projeto, execute:
+```bash
+python -m venv .venv

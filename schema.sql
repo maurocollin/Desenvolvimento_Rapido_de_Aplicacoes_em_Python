@@ -1,6 +1,3 @@
--- Script de criação do banco de dados para o Sistema de Notas de Alunos
--- Disciplina: Desenvolvimento Rápido de Aplicações em Python
-
 CREATE TABLE IF NOT EXISTS alunos (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nome TEXT NOT NULL,
