@@ -1,13 +1,19 @@
 # Sistema de Registro de Notas de Alunos - Estácio
 
-Este projeto foi desenvolvido como parte da **Atividade Verificadora de Aprendizagem** para a disciplina de **Desenvolvimento Rápido de Aplicações em Python**. O sistema permite a gestão completa (CRUD) de alunos e suas respetivas notas.
+Este projeto foi desenvolvido como parte da **Atividade Verificadora de Aprendizagem** para a disciplina de **Desenvolvimento Rápido de Aplicações em Python**. O sistema permite a gestão completa (CRUD) de alunos e suas respectivas notas.
 
-## 🛠️ Tecnologias e Requisitos
+# Aluno
+* **Aluno:** Mauro Henrique Collin Ferreira 
+* **Matrícula:** 202403689601 
+* **Curso:** Análise e Desenvolvimento de Sistemas (ADS) 
+* **Professor:** Ralfh V Ansuattigui
+
+## Tecnologias e Requisitos
 * **Linguagem:** Python 3.10 ou superior
 * **Base de Dados:** SQLite 3
 * **Interface Gráfica:** Tkinter (Customizado em Dark Mode)
 
-## 📊 Análise Técnica: SQLite vs PostgreSQL
+## Análise Técnica: SQLite vs PostgreSQL
 Conforme os requisitos da atividade, optou-se pela utilização do **SQLite**.
 
 ### Ganhos:
