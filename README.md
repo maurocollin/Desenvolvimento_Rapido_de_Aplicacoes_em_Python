@@ -13,13 +13,8 @@ Este projeto foi desenvolvido como parte da **Atividade Verificadora de Aprendiz
 * **Base de Dados:** SQLite 3 (`schema.sql`)
 * **Interface Gráfica:** Tkinter (Customizado em Dark Mode)
 
-## Tecnologias e Requisitos
-* **Linguagem:** Python 3.10 ou superior
-* **Base de Dados:** SQLite 3
-* **Interface Gráfica:** Tkinter (Customizado em Dark Mode)
-
 ## Análise Técnica: SQLite vs PostgreSQL
-Conforme os requisitos da atividade, optou-se pela utilização do **SQLite** por ser embutido e portátil.
+Conforme os requisitos da atividade, optou-se pela utilização do **SQLite** por ser embutido, portátil e mais leve.
 
 ### Ganhos:
 * **Portabilidade:** A base de dados é um ficheiro único (`sistema_notas.db`), permitindo a execução imediata sem a necessidade de configurar um servidor externo como o PostgreSQL.
@@ -39,7 +34,7 @@ Antes de começar, você precisará instalar as ferramentas básicas:
 * **Git:** Baixe em: [git-scm.com/install/windows](https://git-scm.com/install/windows)
 
 ### 2. Clonar o Repositório
-Abra o **Git CMD** ou terminal e execute:
+Abra o **CMD** ou terminal e execute:
 ```bash
 git clone https://github.com/maurocollin/desenvolvimento_rapido_de_aplicacoes_em_python.git
 cd desenvolvimento_rapido_de_aplicacoes_em_python
