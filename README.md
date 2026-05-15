@@ -34,13 +34,10 @@ Antes de começar, você precisará instalar as ferramentas básicas:
 * **Git:** Baixe em: [git-scm.com/install/windows](https://git-scm.com/install/windows)
 
 ### 2. Clonar o Repositório
-Abra o **CMD** ou terminal e execute:
+Abra o **CMD** ou terminal da sua IDE e execute:
 ```bash
 git clone https://github.com/maurocollin/desenvolvimento_rapido_de_aplicacoes_em_python.git
 cd desenvolvimento_rapido_de_aplicacoes_em_python
-
-### 3. Rode os seguintes comandos:
-# No próprio **Git CMD** ou terminal e execute os seguintes comandos:
 
 # Cria o ambiente virtual
 python -m venv .venv
