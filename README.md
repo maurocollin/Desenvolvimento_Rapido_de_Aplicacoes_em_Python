@@ -3,8 +3,7 @@
 Este projeto foi desenvolvido como parte da **Atividade Verificadora de Aprendizagem** para a disciplina de **Desenvolvimento Rápido de Aplicações em Python**. O sistema permite a gestão completa (CRUD) de alunos e suas respectivas notas.
 
 # Identificação
-* **Aluno:** Mauro Henrique Collin Ferreira 
-* **Matrícula:** 202403689601
+* **Aluno:** Mauro Henrique Collin Ferreira **Matrícula:** 202403689601
 * **Curso:** Análise e Desenvolvimento de Sistemas (ADS) 
 * **Professor:** Ralfh V Ansuattigui
 
