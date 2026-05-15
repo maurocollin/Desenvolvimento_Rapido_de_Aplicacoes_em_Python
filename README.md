@@ -44,6 +44,9 @@ python -m venv .venv
 # Ativar o ambiente virtual (Windows)
 .venv\Scripts\activate
 
+# Ativar o ambiente virtual (linux)
+source .venv/bin/activate
+
 # Instala dependências
 pip install -r requirements.txt
 
